@@ -4,7 +4,7 @@ package com.beta.recycleitem;
 
 public class Data {
 	public static final int TYPE_ONE = 1;//类型1
-	public static final int TYPE_TWO = 2;//类型22222
+	public static final int TYPE_TWO = 2;//类型22222333
 
 	public int type;//item内容 类型
 

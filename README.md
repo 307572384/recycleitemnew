@@ -1,0 +1,2 @@
+# recycleitemnew
+解决item中关于跳转到另一个Activity的问题和判断多个item进行跳转到另一个Activity

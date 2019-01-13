@@ -38,7 +38,6 @@ public class SWActivity extends MDBaseActivity {
 		mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
 
-
 		my_recycler_view.setLayoutManager(mLayoutManager);
 
 		my_recycler_view.setItemAnimator(new DefaultItemAnimator());

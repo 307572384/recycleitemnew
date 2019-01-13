@@ -2,13 +2,10 @@ package com.beta.recycleitem;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.List;
 
@@ -17,8 +14,9 @@ import java.util.List;
  */
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-	private List<Data> list;//数据源
-	private Context    mcontent;//上下文
+	public  OnItemClickListener mOnItemClickListener;//第二步：声明自定义的接口
+	private List<Data>          list;//数据源
+	private Context             mcontent;//上下文
 
 	public MyRecyclerViewAdapter(List<Data> list, Context context) {
 		this.list = list;
@@ -57,18 +55,16 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 		return list.get(position).type;
 	}
 
+	//第三步：定义方法并暴露给外面的调用者
+	public void setOnItemClickListener(OnItemClickListener listener) {
+		this.mOnItemClickListener = listener;
+	}
+
 	//第一步：自定义一个回调接口来实现Click和LongClick事件
 	public interface OnItemClickListener {
 		void onItemClick(View v, int position);
 
 		void onItemLongClick(View v);
-	}
-
-	public OnItemClickListener mOnItemClickListener;//第二步：声明自定义的接口
-
-	//第三步：定义方法并暴露给外面的调用者
-	public void setOnItemClickListener(OnItemClickListener listener) {
-		this.mOnItemClickListener = listener;
 	}
 
 	//第一个item类型
@@ -89,7 +85,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 		@Override
 		public void onClick(View v) {
 			if (mOnItemClickListener != null) {
-				mOnItemClickListener.onItemClick(v,getAdapterPosition());
+				mOnItemClickListener.onItemClick(v, getAdapterPosition());
 			}
 		}
 	}

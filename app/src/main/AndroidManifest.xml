@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".testActivity"/>
+        <activity android:name=".DLActivity"/>
+        <activity android:name=".MDBaseActivity"/>
+        <activity android:name=".SWActivity"/>
     </application>
 
 </manifest>

@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.ToggleButton;
 
 
-
 public class testActivity extends Activity implements View.OnClickListener {
 	private Button       button;
 	private Button       test2;

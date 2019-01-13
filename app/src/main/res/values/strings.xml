@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">recycleitem</string>
+    <string name="md_add_item">添加</string>
+    <string name="md_del_item">删除</string>
 </resources>

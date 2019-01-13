@@ -1,7 +1,6 @@
 package com.beta.recycleitem;
 
 
-
 public class Data {
 	public static final int TYPE_ONE = 1;//类型1
 	public static final int TYPE_TWO = 2;//类型22222333
@@ -10,6 +9,7 @@ public class Data {
 
 
 	public String message;
+
 	public Data(int type, String message) {
 		this.type = type;
 
@@ -31,7 +31,6 @@ public class Data {
 	public void setType(int type) {
 		this.type = type;
 	}
-
 
 
 	public String getMessage() {
